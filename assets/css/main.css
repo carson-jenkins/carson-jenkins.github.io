@@ -1783,51 +1783,67 @@ ul.social li {
 }
 
 ul.social li a {
-	-moz-transition: top .2s ease-in-out, background-color .2s ease-in-out;
-	-webkit-transition: top .2s ease-in-out, background-color .2s ease-in-out;
-	-ms-transition: top .2s ease-in-out, background-color .2s ease-in-out;
-	transition: top .2s ease-in-out, background-color .2s ease-in-out;
+	transition: top .2s ease-in-out;
 	display: block;
 	width: 48px;
 	height: 48px;
 	border-radius: 6px;
 	top: 0;
 	position: relative;
-	color: #2E2E2E; /* Default icon color */
-	font-size: 26px;
-	line-height: 48px;
-	text-align: center;
-	background-color: #444; /* Default background color */
-}
-
-/* Hover effects for specific social icons with background color */
-ul.social li a.linkedin:hover {
-	background-color: blue; /* LinkedIn background hover color */
-}
-
-ul.social li a.github:hover {
-	background-color: purple; /* GitHub background hover color */
-}
-
-ul.social li a.email:hover {
-	background-color: red; /* Email background hover color */
 }
 
 ul.social li a:before {
-	content: '';
-	display: inline-block;
+	background-image: url("images/bg.png"), linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+	transition: background-color .2s ease-in-out;
+	background-color: #444;
 	border-radius: 6px;
 	box-shadow: inset 0px 0px 0px 1px #282828, inset 0px 2px 1px 0px rgba(255, 255, 255, 0.1);
-	height: 100%;
-	width: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: -1; /* Ensures background color doesn't overlay the icon */
+	color: #2E2E2E !important;
+	display: block;
+	font-size: 26px;
+	height: 48px;
+	line-height: 48px;
+	text-align: center;
+	outline: 0;
+	overflow: hidden;
+	text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1);
+	width: 48px;
 }
 
+/* LinkedIn Icon */
+ul.social li a.fa-linkedin-in {
+	background-color: #006599;
+}
+
+ul.social li a.fa-linkedin-in:hover:before {
+	background-color: #006599; /* Blue on hover */
+}
+
+/* GitHub Icon */
+ul.social li a.fa-github {
+	background-color: #FAFAFA;
+}
+
+ul.social li a.fa-github:hover:before {
+	background-color: #6e5494; /* Purple on hover */
+}
+
+/* Email Icon */
+ul.social li a.fa-envelope {
+	background-color: #D44638;
+}
+
+ul.social li a.fa-envelope:hover:before {
+	background-color: #D44638; /* Red on hover */
+}
+
+/* Hover effect for all icons */
 ul.social li a:hover {
 	top: -5px;
+}
+
+ul.social li a:hover:before {
+	background-color: transparent;
 }
 
 /* Actions */
