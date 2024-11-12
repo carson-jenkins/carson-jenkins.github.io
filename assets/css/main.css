@@ -1783,58 +1783,51 @@ ul.social li {
 }
 
 ul.social li a {
-	-moz-transition: top .2s ease-in-out, color .2s ease-in-out;
-	-webkit-transition: top .2s ease-in-out, color .2s ease-in-out;
-	-ms-transition: top .2s ease-in-out, color .2s ease-in-out;
-	transition: top .2s ease-in-out, color .2s ease-in-out;
+	-moz-transition: top .2s ease-in-out, background-color .2s ease-in-out;
+	-webkit-transition: top .2s ease-in-out, background-color .2s ease-in-out;
+	-ms-transition: top .2s ease-in-out, background-color .2s ease-in-out;
+	transition: top .2s ease-in-out, background-color .2s ease-in-out;
 	display: block;
 	width: 48px;
 	height: 48px;
 	border-radius: 6px;
 	top: 0;
 	position: relative;
-	color: #2E2E2E; /* Default color */
+	color: #2E2E2E; /* Default icon color */
+	font-size: 26px;
+	line-height: 48px;
 	text-align: center;
+	background-color: #444; /* Default background color */
 }
 
-/* Hover effects for specific social icons */
+/* Hover effects for specific social icons with background color */
 ul.social li a.linkedin:hover {
-	color: blue; /* LinkedIn hover color */
+	background-color: blue; /* LinkedIn background hover color */
 }
 
 ul.social li a.github:hover {
-	color: purple; /* GitHub hover color */
+	background-color: purple; /* GitHub background hover color */
 }
 
 ul.social li a.email:hover {
-	color: red; /* Email hover color */
+	background-color: red; /* Email background hover color */
 }
 
 ul.social li a:before {
-	background-image: url("images/bg.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-	background-image: url("images/bg.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-	background-image: url("images/bg.png"), -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-	background-image: url("images/bg.png"), linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-	-moz-transition: background-color .2s ease-in-out;
-	-webkit-transition: background-color .2s ease-in-out;
-	-ms-transition: background-color .2s ease-in-out;
-	transition: background-color .2s ease-in-out;
-	background-color: #444;
+	content: '';
+	display: inline-block;
 	border-radius: 6px;
 	box-shadow: inset 0px 0px 0px 1px #282828, inset 0px 2px 1px 0px rgba(255, 255, 255, 0.1);
-	font-size: 26px;
-	height: 48px;
-	line-height: 48px;
-	text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1);
-	width: 48px;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1; /* Ensures background color doesn't overlay the icon */
 }
 
 ul.social li a:hover {
 	top: -5px;
-}
-
-ul.social li a:hover:before {
-	background-color: transparent;
 }
 
 /* Actions */
