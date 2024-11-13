@@ -1837,13 +1837,9 @@ ul.social li a.fa-envelope:hover:before {
 	background-color: #D44638; /* Red on hover */
 }
 
-/* Hover effect for all icons */
+/* General hover lift effect for all icons */
 ul.social li a:hover {
 	top: -5px;
-}
-
-ul.social li a:hover:before {
-	background-color: transparent;
 }
 
 /* Actions */
