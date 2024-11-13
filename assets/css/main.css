@@ -1788,13 +1788,11 @@ ul.social li a {
 	width: 48px;
 	height: 48px;
 	border-radius: 6px;
-	top: 0;
 	position: relative;
 }
 
+/* Icon Styling */
 ul.social li a:before {
-	background-image: url("images/bg.png"), linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-	transition: background-color .2s ease-in-out;
 	background-color: #444;
 	border-radius: 6px;
 	box-shadow: inset 0px 0px 0px 1px #282828, inset 0px 2px 1px 0px rgba(255, 255, 255, 0.1);
@@ -1805,41 +1803,28 @@ ul.social li a:before {
 	line-height: 48px;
 	text-align: center;
 	outline: 0;
-	overflow: hidden;
-	text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1);
 	width: 48px;
+	transition: background-color .2s ease-in-out;
 }
 
-/* LinkedIn Icon */
 ul.social li a.fa-linkedin-in {
 	background-color: #006599;
 }
 
-ul.social li a.fa-linkedin-in:hover:before {
-	background-color: #006599; /* Blue on hover */
-}
-
-/* GitHub Icon */
 ul.social li a.fa-github {
 	background-color: #FAFAFA;
 }
 
-ul.social li a.fa-github:hover:before {
-	background-color: #6e5494; /* Purple on hover */
-}
-
-/* Email Icon */
 ul.social li a.fa-envelope {
-	background-color: #D44638;
+	background-color: #E74C3C;
 }
 
-ul.social li a.fa-envelope:hover:before {
-	background-color: #D44638; /* Red on hover */
-}
-
-/* General hover lift effect for all icons */
 ul.social li a:hover {
 	top: -5px;
+}
+
+ul.social li a:hover:before {
+	background-color: transparent;
 }
 
 /* Actions */
